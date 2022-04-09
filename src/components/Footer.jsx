@@ -1,38 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../views/Footer.css";
+import {db} from "../firebase.js";
+import Element from "./Element";
 
 function Footer() {
-    const col1= [
-           "Alkali Metals",
-           "Metalloids",
-           "Actinides",
-        ];
-    const col2= [
-            "Alkaline earth metals",
-            "Reactive nonmetals",
-            "Unknown properties",
-        ];
-    const col3= [
-            "Transition Metals",
-            "Noble gases",
-        ];
-    const col4= [
-            "Post-transition metals",
-            "Lanthanides",
-        ];
+    const[elements1, setElements1] = useState([]);
+    const[elements2, setElements2] = useState([]);
+    const[elements3, setElements3] = useState([]);
+    const[elements4, setElements4] = useState([]);
+
+    useEffect(()=>{
+        db.collection('col1').onSnapshot(snapshot => (
+          setElements1(snapshot.docs.map(doc => doc.data()))
+        ))
+      },[]);
+    useEffect(()=>{
+        db.collection('col2').onSnapshot(snapshot => (
+          setElements2(snapshot.docs.map(doc => doc.data()))
+        ))
+      },[]);
+    useEffect(()=>{
+        db.collection('col3').onSnapshot(snapshot => (
+          setElements3(snapshot.docs.map(doc => doc.data()))
+        ))
+      },[]);
+    useEffect(()=>{
+        db.collection('col4').onSnapshot(snapshot => (
+          setElements4(snapshot.docs.map(doc => doc.data()))
+        ))
+      },[]);
 
     return <div className='footer'>
         <div className='footerCol'>
-            {col1.map(col =><h7 className="footerRow__elements">{col}</h7>)}
+            {elements1.map(el1 =><Element name={el1.name} elcolor={el1.color}></Element>)}
         </div>
         <div className='footerCol'>
-            {col2.map(col =><h7 className="footerRow__elements">{col}</h7>)}
+            {elements2.map(el2 =><Element name={el2.name} elcolor={el2.color}></Element>)}
         </div>
         <div className='footerCol'>
-            {col3.map(col =><h7 className="footerRow__elements">{col}</h7>)}
+            {elements3.map(el3 =><Element name={el3.name} elcolor={el3.color}></Element>)}
         </div>
         <div className='footerCol'>
-            {col4.map(col =><h7 className="footerRow__elements">{col}</h7>)}
+            {elements4.map(el4 =><Element name={el4.name} elcolor={el4.color}></Element>)}
         </div>
     </div>;
 }

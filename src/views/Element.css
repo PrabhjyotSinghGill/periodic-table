@@ -1,0 +1,22 @@
+.element {
+  display: flex;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.element > h7 {
+  padding-left: 15px;
+}
+
+.elementColor {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  padding: 4px;
+  display: inline-block;
+  border-color: #d8f8ff;
+  color: #d8f8ff;
+  stroke: #d8f8ff;
+  width: 0.5vw;
+  height: 0.5vw;
+}
