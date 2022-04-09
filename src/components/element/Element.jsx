@@ -1,5 +1,5 @@
 import React from 'react';
-import "../views/Element.css";
+import "./Element.css";
 
 function Element({name,elcolor}) {
     return< div className='element'>

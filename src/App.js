@@ -1,9 +1,8 @@
 import React from 'react';
-import {Routes, Route,Link} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import './App.css';
-import Footer from "./components/Footer";
-import PeriodicTable from "./components/PeriodicTable";
-import ElementProperties from './components/ElementProperties';
+import PeriodicTable from "./components/periodic-table/PeriodicTable";
+import ElementProperties from './components/element-properties/ElementProperties';
 
 
 function App() {
@@ -14,9 +13,8 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<PeriodicTable></PeriodicTable>}></Route>
-        <Route path="element-properties" element={<ElementProperties></ElementProperties>}></Route>
+        <Route path="element-properties/:atomicNumber" element={<ElementProperties></ElementProperties>}></Route>
       </Routes>
-      <Footer></Footer>
     </div>
   );
 }
