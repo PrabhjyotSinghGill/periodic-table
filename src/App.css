@@ -4,7 +4,24 @@
 }
 .app {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: gray;
+  background: #202124;
+}
+
+.header{
+  display: flex;
+  height:5vh;
+  width: 100%;
+  color: #bdc1c6;
+  border-bottom: 1px solid #bdc1c6;
+}
+
+.footer{
+  display: flex;
+  height:5vh;
+  width: 100%;
+  color: #bdc1c6;
+  border-top: 1px solid #bdc1c6;
 }
