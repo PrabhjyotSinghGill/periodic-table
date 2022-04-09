@@ -1,7 +1,7 @@
-const DEBUG = true;
+const DEBUG = false;
 
-export const debugLog = (message) => {
+export const debugLog = (...message) => {
   if (DEBUG) {
-    console.log(message);
+    console.log(...message);
   }
 };
