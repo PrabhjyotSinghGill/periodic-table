@@ -1,7 +1,11 @@
 .periodicTable{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
-    height: 90vh;
+    height: 70vh;
     width: 100%;
+    color:#bdc1c6;
     background: #202124;
 }
+

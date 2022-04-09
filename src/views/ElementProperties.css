@@ -1,7 +1,13 @@
-.elementProperties{
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
-    width: 100%;
-    background: #202124;
+.elementProperties {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  color: #bdc1c6;
+  background: #202124;
+  text-decoration: none;
 }
+
+

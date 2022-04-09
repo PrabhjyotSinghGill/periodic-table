@@ -1,6 +1,7 @@
 import React from 'react';
 import {Routes, Route,Link} from "react-router-dom";
 import './App.css';
+import Footer from "./components/Footer";
 import PeriodicTable from "./components/PeriodicTable";
 import ElementProperties from './components/ElementProperties';
 
@@ -15,9 +16,7 @@ function App() {
         <Route path="/" element={<PeriodicTable></PeriodicTable>}></Route>
         <Route path="element-properties" element={<ElementProperties></ElementProperties>}></Route>
       </Routes>
-      <div className='footer'>
-        <h1>Footer</h1>
-      </div>
+      <Footer></Footer>
     </div>
   );
 }
