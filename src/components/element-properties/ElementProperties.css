@@ -3,11 +3,32 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 85vh;
+  height: 95vh;
   width: 100%;
   color: #bdc1c6;
   background: #202124;
   text-decoration: none;
 }
 
+.elementProperties > h2 {
+  margin-top: 2%;
+}
 
+.elementInfo {
+  display: flex;
+  flex-direction: column;
+  font-family: arial, sans-serif;
+  min-height: 500px;
+  position: relative;
+  padding: 2%;
+  border: 3px solid rgba(189, 193, 198, 0.2);
+  border-radius: 2%;
+  width: 30%;
+}
+
+.element {
+  display: flex;
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+  border-bottom: 1px solid rgba(189, 193, 198, 0.2);
+}
