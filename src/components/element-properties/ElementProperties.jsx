@@ -29,7 +29,7 @@ function ElementProperties() {
     return <div className='elementProperties'>
             <h2>Element Properties</h2>
         <div className='elementInfo'>
-            <div className='backButton'><Link to="/">back</Link></div>
+            <div className='backButton'><h3>{element && element.name}</h3><Link to="/">back</Link></div>
             {element && Object.keys(element).map((key) => <div className="element" key={`${element.symbol}-${key}`}>{`${key}: ${element[key]}`}</div>)}
         </div>
     </div>
