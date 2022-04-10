@@ -1,6 +1,6 @@
 import React from 'react';
 import "./ElementProperties.css";
-import { useParams} from "react-router-dom";
+import { Link,useParams} from "react-router-dom";
 import { debugLog } from '../../utils/logger';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -29,6 +29,7 @@ function ElementProperties() {
     return <div className='elementProperties'>
             <h2>Element Properties</h2>
         <div className='elementInfo'>
+            <div className='backButton'><Link to="/">back</Link></div>
             {element && Object.keys(element).map((key) => <div className="element" key={`${element.symbol}-${key}`}>{`${key}: ${element[key]}`}</div>)}
         </div>
     </div>

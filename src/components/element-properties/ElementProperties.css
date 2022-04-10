@@ -28,7 +28,16 @@
 
 .element {
   display: flex;
-  padding-top: 2%;
+  padding-top: 1.5%;
   padding-bottom: 0.5%;
   border-bottom: 1px solid rgba(189, 193, 198, 0.2);
+  font-size: large;
+}
+
+.backButton {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: larger;
+  font-weight: bold;
 }
