@@ -1,0 +1,17 @@
+.periodicTableElement {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2eeff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 12px;
+  height: 80px;
+  position: relative;
+  transition-property: opacity;
+  transition-duration: 0.8s;
+  width: 80px;
+  background-color: #2a4165;
+  color: #e2eeff;
+  stroke: #e2eeff;
+}
