@@ -18,12 +18,12 @@
   display: flex;
   flex-direction: column;
   font-family: arial, sans-serif;
-  min-height: 500px;
   position: relative;
   padding: 2%;
   border: 3px solid rgba(189, 193, 198, 0.2);
   border-radius: 2%;
   width: 30%;
+  overflow-y: scroll;
 }
 
 .element {

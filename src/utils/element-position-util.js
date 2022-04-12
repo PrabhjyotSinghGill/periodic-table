@@ -2,7 +2,10 @@ let elementPositionDict = {};
 
 export const initElementPositionDict = (elements) => {
     elements.forEach(element => {
-        if(element.symbol == 'B'){
+        // this is done to fix the period for Boron
+        // because for boron the period is incorrect
+        // in the response returned from the api.
+        if(element.symbol === 'B'){
             element.period = 2;
           }
         let key = `${element.period-1}-${element.group-1}`
